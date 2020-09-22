@@ -1,0 +1,359 @@
+﻿/*!
+* Created by Kroplet (https://www.kroplet.com) 
+* The easiest way to create Bootstrap 4 themes. 
+*/
+
+/*****************
+Custom CSS
+*****************/
+
+.small-xl {
+    font-size: 90%;
+}
+
+.img-review {
+    max-width: 150px;
+}
+
+.img-logo {
+    max-width: 150px;
+}
+
+.btn {
+    font-family: $font-family-monospace;
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+/*navbar*/
+.navbar {
+    @media (max-width: 992px) {
+        &.navbar-transparent {
+            background-color: rgba($black, 0.4);
+        }
+    }
+    .navbar-brand img {
+        max-width: 150px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 .7rem;
+
+        .nav-link {
+            font-family: $font-family-monospace;
+            font-size: 90%;
+            padding: .5rem;
+            border-bottom: 2px solid transparent;
+            
+            @media (min-width: 992px) {
+                &:hover {
+                    border-bottom: 2px solid $navbar-dark-hover-color;
+                    transition: all 0.2s ease-out;
+                }
+            }
+        }
+    }
+}
+
+/*vertical heights */
+.vh-100 {
+    height: 100vh;
+}
+
+@media (min-width:576px){
+    .vh-sm-100{
+        height: 100vh;
+    }
+}
+
+@media (min-width:768px){
+    .vh-md-100{
+        height: 100vh;
+    }
+}
+
+.bg-hero {
+    background-color: $dark;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    
+    &:before {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        content: "";
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .container {
+        z-index: 2;
+        position: relative;
+    }
+}
+
+/** gradients & dividers */
+.bg-gradient {
+    background-image:linear-gradient(90deg, $primary 0, $secondary);
+}
+
+.bg-gradient-alt {
+    background-image:linear-gradient(90deg, $secondary 0, $primary);
+}
+
+.divider {
+    width: 3.125rem !important;
+    height: 0.25rem;
+    border-radius: $border-radius !important;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    &.divider-sm {
+        height: 0.125rem;
+    }
+
+    &.divider-lg {
+        height: 0.5rem;
+    }
+}
+
+/*nav-pills */
+.nav-pills .nav-link {
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 700;
+    
+    &:not(.active):hover {
+        background-color: $light;
+    }
+}
+
+/**slick slider */
+.slick-dots li {
+    button::before {
+        font-size: 8px !important;
+        line-height: 40px !important; 
+    }
+    
+    button::before, &.slick-active button:before {
+        color: $primary !important;
+    }
+}
+
+.slick-next:before, .slick-prev:before {
+    color: $primary !important;
+}
+
+/*Pricing tables*/
+.pricing-list{
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    li {
+        font-weight: normal;
+        margin-bottom: 1rem;
+    }
+}
+
+/*footer*/
+footer ul > li {
+    &:not(.list-inline-item) {
+        padding-bottom: 0.5rem; 
+    }
+    
+    a {
+        color: $body-color;
+        text-decoration: none !important;
+    }
+}
+
+
+/*social icons*/
+.social {
+    a {
+        width: 45px;
+        height: 45px;
+        background: rgba($white, 0.1);
+        display: block;
+        text-align: center;
+        color: $white;
+        border-radius: $border-radius;
+        font-size: 18px;
+        line-height: 45px;
+
+        &:hover {
+            background: $primary;
+        }
+    }
+
+    &.social-sm a {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        line-height: 35px; 
+    }
+
+    &.social-rounded a {
+       border-radius: 50%;
+    }
+
+    &.social-white a {
+        background: $white;
+        color: rgba($body-color, 0.7);
+
+        &:hover {
+            color: $primary;
+        }
+    }
+ 
+    &.social-white-alt a {
+        background: $white;
+        color: rgba($body-color, 0.7);
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+}
+
+/*scroll to top */
+.scroll-top {
+    bottom: 20px;
+    font-size: 20px;
+    height: 40px;
+    position: fixed;
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 50%;
+    line-height: 40px;
+    right: -100px;
+    color: $white;
+    background-color: rgba($primary, .5);
+    
+    &:hover {
+        background-color: rgba($primary, 1);
+    }
+
+    &.active {
+        right: 20px; 
+    }
+}
+
+/*all themes colors*/
+.bg-black {
+    background-color: $black;
+}
+.bg-blue {
+    background-color: $blue;
+}
+.bg-indigo {
+    background-color: $indigo;
+}
+.bg-purple {
+    background-color: $purple;
+}
+.bg-pink {
+    background-color: $pink;
+}
+.bg-red {
+    background-color: $red;
+}
+.bg-orange {
+    background-color: $orange;
+}
+.bg-yellow {
+    background-color: $yellow;
+}
+.bg-green {
+    background-color: $green;
+}
+.bg-teal {
+    background-color: $teal;
+}
+.bg-cyan {
+    background-color: $cyan;
+}
+
+/*theme switcher*/
+.switcher-wrap {
+    position: fixed;
+    top: 200px;
+    width: 250px;
+    background: $white;
+    color: $body-color;
+    z-index: 100;
+    padding: 20px;
+    left: -250px;
+    transition: .3s;
+
+    &.active {
+        left: 0; 
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; 
+
+        li {
+            margin-bottom: .5rem;
+
+            a {
+                color: $body-color;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .color-switcher ul li {
+        width: 28px;
+        height: 28px;
+        float: left;
+        margin: 3px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: .3s; 
+
+        &.active {
+            border: 3px solid #fff; 
+        }
+    }
+
+    .switcher-trigger {
+        position: absolute;
+        left: 100%;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        top: 0;
+        font-size: 20px;
+        text-align: center;
+        color: rgba($primary, 0.5);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 2px 2px 0;
+
+        &:hover {
+            color: $primary;
+        } 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .switcher-wrap {
+        display: none; 
+    } 
+}

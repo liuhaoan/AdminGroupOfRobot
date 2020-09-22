@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>九职班级娱乐机器人</title>
+
+        <!--Google fonts-->
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500|Roboto:300,400,700"> -->
+
+        <!--vendors styles-->
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
+
+        <!-- Bootstrap CSS / Color Scheme -->
+        <link rel="stylesheet" href="css/default.css" id="theme-color">
+
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <!--navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top stick-parallex">
+            <a class="navbar-brand" href="index.html">
+                <!-- <img src="img/logo.svg" alt="Startupster"/> -->
+                <i class="fa fa-wpexplorer fa-2x" aria-hidden="true">  九职班级娱乐机器人</i>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span data-feather="grid" class="text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#about">关于 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll loginBut" href="#login">登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll registerBut" href="#login">注册</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="https://liuhaoan.gitee.io/">作者博客</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#contact">反馈</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--hero header-->
+        <section class="bg-hero py-7 py-lg-0" style="background-image: url(img/parallex.jpg)" id="login">
+            <div class="container">
+                <div class="row vh-md-100">
+                    <div class="col-md-7 my-md-auto mb-5">
+                        <h1 class="text-white text-capitalize">这是一个免费好玩的机器人···</h1>
+                        <div class="divider divider-sm bg-white"></div>
+                        <p class="lead mb-4 text-white">
+                            练习项目做着玩玩······要是能打赏那就更好啦···
+                        </p>
+                        <a href="#about" class="btn btn-light page-scroll">查看更多</a>
+                    </div>
+                    <div class="col-md-5 my-md-auto">
+                            <!-- <div class="container">
+                                <div class="flip">
+                                    <div class="box front">
+                                        <img src="img/team-2.jpg" alt="">
+                                        正面
+                                    </div>
+                                    <div class="box back">
+                                        <img src="img/team-3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div> -->
+                        <div class="card">
+                            <div class="card-header bg-primary">
+                                <h4 class="text-white text-center" id="title">登入</h4>
+                            </div>
+
+                            <div class="card-body pt-5" style="text-align: center;">
+                                <!--<div class="form-group col-md-12 userLcon"></div>
+                                <div class="form-group col-md-6">
+                                    <a class="btn btn-info" href="#" role="button">个人主页</a>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <a class="btn btn-info" href="#" role="button">控制面板</a>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <a class="btn btn-info" href="#" role="button">退出登入</a>
+                                </div>-->
+
+                            <div class="card-body pt-5">
+                                <form class="login">
+                                    <div class="form-group col-md-12">
+                                        <input id="username" type="text" class="form-control" placeholder="请输入账号">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <input id="password" type="password" class="form-control" placeholder="请输入密码">
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <input id="checkCode" class="form-control" placeholder="请输入验证码">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <img src="#" alt="验证码" id="checkCodeImg">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <a href="#" class="btn btn-primary btn-block" id="login1">Login</a>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <a href="#login" class="btn btn-primary btn-block registerBut">Register</a>
+                                    </div>
+                                </form>
+
+                                <!-- 注册 -->
+                                <form class="register">
+                                    <blockquote style="color: white">
+                                        账号和密码必须为：6到15位的小写字母加数字组合
+                                    </blockquote>
+                                    <div class="form-group col-md-12">
+                                        <input id="usernameReg" type="text" class="form-control" placeholder="账号">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <input id="passwordReg" type="password" class="form-control" placeholder="密码">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <input id="passwordReg1" type="password" class="form-control" placeholder="确认你的密码">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <input id="email" type="email" class="form-control" placeholder="邮箱，例：123456@QQ.com">
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <input id="checkCodeReg" class="form-control" placeholder="验证码">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <img src="#" alt="验证码" id="checkCodeImg1">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <a id="register1" href="#" class="btn btn-primary btn-block">Register</a>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <a href="#login" class="btn btn-primary btn-block loginBut">Loin</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--about-->
+        <section class="py-7" id="about" style="background: #fff url(img/heart.svg) no-repeat -200px center/500px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto text-center">
+                        <h1 class="text-capitalize">主要功能</h1>
+                        <div class="divider bg-primary mx-auto"></div>
+                        <p class="my-5">
+                            当前功能为自动推送课表，后续慢慢添加。除了自动推送还可以在群里发送“今天课表” 或 “明天课表”，这样机器人就会推送出相应的课表来。
+                            当然，需要别的功能可以在本网站反馈，或者是加我QQ：1280551527。
+                        </p>
+                        <a href="#contact"><button class="btn btn-primary"><i class="fa fa-heartbeat fa-2x"></i></button></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--contact-->
+        <section class="py-7 bg-primary" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto text-center">
+                        <h2 class="text-capitalize text-white">你需要反馈一些意见吗？我会认真处理的哦！</h2>
+                        <div class="divider bg-white mx-auto"></div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-8 mx-auto">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="敢问少侠尊姓大名？">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email"  class="form-control" placeholder="帅哥美女留个邮箱的联系方式吧！">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea rows="5"  class="form-control" placeholder="专家建议你把哪里不好的地方都说出来"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-light">飞鸽传书···</button>
+                            </div>
+                        </form>
+                    </div> <!-- END col-lg-8-->
+                </div> <!-- END row-->
+            </div> <!-- END container-->
+        </section>
+
+        <!--footer-->
+        <footer class="py-6 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/logo-colored.svg" class="img-logo d-block mb-4" />
+                        <p>
+                            Nam liber tempor cum soluta nobis eleifend they option congue is nihil imper per 
+                            tem por legere is me velit doming vulputate.
+                        </p>
+                        <ul class="list-inline social social-rounded social-white-alt">
+                            <li class="list-inline-item">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 ml-auto">
+                        <h6 class="text-capitalize">Useful Links</h6>
+                        <div class="divider bg-primary"></div>
+                        <ul class="list-unstyled mt-4">
+                            <li><a href="#about">关于</a></li>
+                            <li><a href="#login" class="loginBut">登入</a></li>
+                            <li><a href="#login" class="registerBut">注册</a></li>
+                            <li><a href="https://liuhaoan.gitee.io/">作者博客</a></li>
+                            <li><a href="#contact">反馈</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-capitalize">Contact Info</h6>
+                        <div class="divider bg-primary"></div>
+                        <ul class="list-unstyled mt-4">
+                            <li class=" mb-2">
+                                <span class="mr-2" data-feather="phone" width="16" height="16"></span>
+                                +123 456 78900
+                            </li>
+                            <li class=" mb-2">
+                                <span class="mr-2" data-feather="mail" width="16" height="16"></span>
+                                1280551527@qq.com
+                            </li>
+                            <li class=" mb-2">
+                                <span class="mr-2" data-feather="map-pin" width="16" height="16"></span>
+                                银河系 -> 地球 -> 中国
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--copyright-->
+        <section class="bg-white my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        &copy; 2020 班级娱乐机器人
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery.min.js"></script>
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+        <script src="js/feather-icons.js"></script>
+        <script src="js/slick-carousel.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

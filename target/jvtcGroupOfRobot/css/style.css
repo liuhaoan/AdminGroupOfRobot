@@ -1,0 +1,86 @@
+/* *{
+    margin:0;
+    padding:0; 
+}
+img{
+    width:445px;
+    height:255.7px;
+}
+
+.flip{
+      float:left;
+    width:445px;
+    height:255.7px;
+    margin:auto;
+    margin:10px;
+    position:relative;
+    父元素里面包含需要变换的内容，所以设置为3D变换
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition:1.5s;
+    设置在1.5s内完成变换
+}
+
+.flip:hover{
+    transform:rotateY(180deg);
+} */
+/*.a {
+  height: 300px;
+}*/
+
+
+/*登入位置*/
+.card, .card-header:first-child {
+  background-color: rgba(28, 124, 105, 0.67);
+  border-radius: 30px;
+}
+
+
+/*头像*/
+.userLcon {
+  border-radius: 120px;
+  background: url("/img/userDefaultLcon.jpg") no-repeat center center;
+  background-size: 250px 250px;
+  left: 20%;
+
+  width: 240px;
+  height: 240px;
+}
+
+.register{
+  display: none;
+  opacity:0;
+}
+.login {
+  /*position:absolute;
+  top: 0px;*/
+  /*display: none;*/
+}
+
+/* .box{
+  width:445px;
+  height:255.7px;
+  position:absolute
+}
+
+
+.back{
+      -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+　　鼠标经过的时候 flip就翻转180deg 翻转的图片由于是背面就看不见但由于.back先翻转了-180deg 所以当他再次rotateY(180deg)的时候 他其实就是正面了即rotate(0)所以此时他能出现
+
+
+
+
+
+ */
+
+
+
+
+
