@@ -1,0 +1,72 @@
+
+酷Q与后台交互
+
+
+Java项目发送给机器人服务端
+{"key": "识别是否为Javaweb项目连接", "id": "事件名"}
+
+推送群消息：{"key": "jvtcGroupOfRobot", "type": "sendGroupMsg", "groupId": "群号", "msg": "待发送的消息"}
+推送私聊消息：{"key": "jvtcGroupOfRobot", "type": "sendFriendMsg", "friendId": "QQ号", "msg": "待发送的消息"}
+处理群邀请：{"key": "jvtcGroupOfRobot", "type": "addGroup",  "flag": "此次受邀的标志"}
+处理好友添加邀请：{"key": "jvtcGroupOfRobot", "type": "addFriend",  "flag": "此次受邀的标志"}
+
+
+
+
+机器人服务的传给java项目
+机器人服务收到QQ的响应事件， 比如：受邀进群、好友添加
+事件消息：
+	群邀请：{"type": "addGroup", "fromAccount": "来源QQ号", "fromGroup": "来源群号", "flag": "此次受邀的标志"}
+	好友添加：{"type": "addFriend", "fromAccount": "来源QQ号", "flag": "此次受邀的标志"}
+	好友消息：{"type": "friendMsg", "fromAccount": "来源QQ号", "msg": "好友的消息"}
+	群消息：{"type": "groupMsg", "fromGroup": "来源群号", "msg": "群的消息"}
+
+
+
+保持连接
+{"listen": "true"}
+
+
+
+
+
+
+后端与前端交互
+
+
+
+登入与注册反馈给回调函数的json数据格式
+{"state": 登入成功或失败（非0即真）, "msg": "反馈的消息"}
+
+
+
+查询用户信息反馈
+前端传后端：不用传
+后端传前端：{"state": 状态码（非0即真）, "user": "用户名", "email": "邮箱"}
+
+
+
+修改密码和邮箱
+前端传后端：{"username": "用户", "password": "原密码", "passwordNew": "新密码", "email": "修改后的邮箱", "checkCode": "验证码"}
+后端传前端：{"state": 修改成功或失败（非0即真）, "msg": "反馈的消息"}
+
+
+任务增删改通信
+
+前端传后端：{ "id": "前端显示的任务编号",  "jiaoWuUsername": "教务系统账号",  "jiaoWuPassword": "教务系统密码"  "groupId": "授权群号"  "accountId": "管理员QQ"  "push_hour_min": "消息推送时间"  "className": "班级"  "isPush": "是否开启推送"  "isNowCourse": "是否推送当天课程"}
+
+后端传前端：{"state": 修改成功或失败（非0即真）, "msg": "反馈的消息"}
+
+
+
+查询分页任务
+    private int totalCount;//总记录数
+    private int totalPage;//总页数
+    private int currentPage;//当前页码
+    private int pageSize;//每页显示的条数
+
+    private List<T> list;//每页显示的数据集合
+
+前端传后端：{"currentPage", 当前页码, "pageSize": 每页显示的条数}
+后端传前端：{"totalCount", 总记录数, "totalPage": 总页数, "currentPage", 当前页码, "list", 每页显示的数据集合}
+

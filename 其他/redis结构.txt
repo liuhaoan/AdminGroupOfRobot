@@ -1,0 +1,12 @@
+推送任务缓存（时间排序）：
+	类型：sortedset类型
+	key：	pushTeskInfo
+	double：	推送时间算法得出的值（user.getSortKey()）
+	valve：	user对象的json文本
+
+
+
+课表缓存：
+	类型：String
+	key：班级群号
+	value：Course对象转为JSON数据
